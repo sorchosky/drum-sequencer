@@ -1,0 +1,26 @@
+.scrollContainer {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: visible;
+  /* hide scrollbar visually but keep it functional */
+  scrollbar-width: thin;
+  scrollbar-color: var(--grid-border) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  /* extra vertical space so 44px hit targets don't clip */
+  padding: 5px 4px;
+  height: 56px;
+  /* prevent row from wrapping */
+  white-space: nowrap;
+}
+
+/* Each cell slot: width driven by the StepCell wrapper (18px) + margin-right from JS */
+.cellSlot {
+  display: inline-flex;
+  align-items: center;
+  /* margin-right is set inline per cell */
+}
