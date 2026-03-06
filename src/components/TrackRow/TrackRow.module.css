@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  height: 56px;
+  border-bottom: 1px solid var(--grid-border);
+  overflow: visible;
+}
+
+.row:last-child {
+  border-bottom: none;
+}

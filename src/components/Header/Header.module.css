@@ -1,0 +1,104 @@
+.header {
+  padding: 16px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.badge {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--panel);
+  border: 1px solid var(--grid-border);
+  border-radius: 10px;
+  padding: 2px 6px;
+  letter-spacing: 0.04em;
+}
+
+.bpmRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bpmDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.bpmValue {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.bpmUnit {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.bpmControls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.tapBtn {
+  align-self: flex-start;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  background: var(--panel);
+  border: 1px solid var(--grid-border);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  min-height: 32px;
+  transition: border-color 100ms, background 100ms;
+}
+
+.tapBtn:hover {
+  border-color: var(--accent);
+  background: var(--grid-off);
+}
+
+.tapBtn:active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.tapBtn:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.bpmSlider {
+  width: 100%;
+}
