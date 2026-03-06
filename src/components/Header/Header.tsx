@@ -10,17 +10,17 @@ export function Header({ bpm, onBpmChange, onTapTempo }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.titleRow}>
-        <span className={styles.logo}>DRUM SEQ</span>
+        <span className={styles.logo}>DRUM SEQUENCER</span>
         <span className={styles.badge}>16-step</span>
       </div>
 
-      <div className={styles.bpmRow}>
-        <div className={styles.bpmDisplay}>
-          <span className={styles.bpmValue}>{bpm}</span>
-          <span className={styles.bpmUnit}>BPM</span>
-        </div>
+      <div className={styles.bpm}>
+        <div className={styles.bpmControlsRow}>
+          <div className={styles.bpmDisplay}>
+            <span className={styles.bpmValue}>{bpm}</span>
+            <span className={styles.bpmUnit}>BPM</span>
+          </div>
 
-        <div className={styles.bpmControls}>
           <button
             className={styles.tapBtn}
             onClick={onTapTempo}
@@ -28,18 +28,18 @@ export function Header({ bpm, onBpmChange, onTapTempo }: HeaderProps) {
           >
             TAP
           </button>
-
-          <input
-            type="range"
-            min={40}
-            max={240}
-            step={1}
-            value={bpm}
-            onChange={e => onBpmChange(parseInt(e.target.value, 10))}
-            aria-label="BPM slider"
-            className={styles.bpmSlider}
-          />
         </div>
+
+        <input
+          type="range"
+          min={40}
+          max={240}
+          step={1}
+          value={bpm}
+          onChange={e => onBpmChange(parseInt(e.target.value, 10))}
+          aria-label="BPM slider"
+          className={styles.bpmSlider}
+        />
       </div>
     </header>
   );
